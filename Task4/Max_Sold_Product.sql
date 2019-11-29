@@ -6,4 +6,4 @@ group by Sales.Product_id,Product.product_name,Category.category_type
 having SUM(sale_quantity)= (select Max(qty ) 
    from (select SUM(sale_quantity)  qty 
      from Sales
-     group by Sales.Product_id ) tab) 
+     group by Sales.Product_id )Sales)
